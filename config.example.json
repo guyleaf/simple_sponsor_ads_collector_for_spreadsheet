@@ -1,0 +1,9 @@
+{
+  "auth_type": "service/api/oauth",
+  "SERVICE_ACCOUNT_EMAIL": "",
+  "PRIVATE_KEY": "",
+  "API_KEY": "your key",
+  "generateFakeData": false,
+  "sheetId": "",
+  "output": "sponsor-ads.json"
+}
