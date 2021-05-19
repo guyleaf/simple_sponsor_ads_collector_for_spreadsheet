@@ -23,7 +23,7 @@ interface base {
 }
 
 interface sponsorType extends base {
-  sponsor: number,
+  sponsor: string,
   level: levels,
   "name:zh-TW": string,
   "name:en": string,
@@ -35,16 +35,16 @@ interface sponsorType extends base {
 }
 
 interface adType extends base {
-  sponsor: number,
+  sponsor: string,
   link: string,
   image: string,
-  specialWeight: number,
+  specialWeight?: number,
   canPublish: boolean
 }
 
 const sponsors: Array<sponsorType> = [
   {
-    "sponsor": 0,
+    "sponsor": "0",
     "level": levels.titanium,
     "name:zh-TW": "Dadabase",
     "name:en": "Intergeek",
@@ -55,7 +55,7 @@ const sponsors: Array<sponsorType> = [
     "canPublish": false
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "level": levels.diamond,
     "name:zh-TW": "Netur",
     "name:en": "Bedlam",
@@ -66,7 +66,7 @@ const sponsors: Array<sponsorType> = [
     "canPublish": false
   },
   {
-    "sponsor": 2,
+    "sponsor": "2",
     "level": levels["organizer"],
     "name:zh-TW": "Kenegy",
     "name:en": "Comfirm",
@@ -77,7 +77,7 @@ const sponsors: Array<sponsorType> = [
     "canPublish": false
   },
   {
-    "sponsor": 3,
+    "sponsor": "3",
     "level": levels.gold,
     "name:zh-TW": "Scentric",
     "name:en": "Manufact",
@@ -88,7 +88,7 @@ const sponsors: Array<sponsorType> = [
     "canPublish": true
   },
   {
-    "sponsor": 4,
+    "sponsor": "4",
     "level": levels.bronze,
     "name:zh-TW": "Zillan",
     "name:en": "Gadtron",
@@ -102,125 +102,112 @@ const sponsors: Array<sponsorType> = [
 
 const ads: Array<adType> = [
   {
-    "sponsor": 0,
+    "sponsor": "0",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 4,
     "canPublish": true
   },
   {
-    "sponsor": 4,
+    "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 2,
     "canPublish": false
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 6,
     "canPublish": true
   },
   {
-    "sponsor": 4,
+    "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
     "canPublish": false
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
     "canPublish": false
   },
   {
-    "sponsor": 2,
+    "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
     "canPublish": true
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 3,
     "canPublish": false
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
     "canPublish": false
   },
   {
-    "sponsor": 0,
+    "sponsor": "0",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 7,
     "canPublish": false
   },
   {
-    "sponsor": 2,
+    "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 4,
     "canPublish": true
   },
   {
-    "sponsor": 1,
+    "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
     "canPublish": true
   },
   {
-    "sponsor": 0,
+    "sponsor": "0",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 2,
     "canPublish": false
   },
   {
-    "sponsor": 4,
+    "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 10,
     "canPublish": false
   },
   {
-    "sponsor": 4,
+    "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 8,
     "canPublish": false
   },
   {
-    "sponsor": 2,
+    "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "specialWeight": 9,
     "canPublish": true
   }
 ];
 
-export default async (creds: key, spreadsheetId: string, sheetIds: {sponsor: string, sponsor_ads: string}) => {
-  const doc = new GoogleSpreadsheet(spreadsheetId);
-  
-  if (creds.auth_type == "service") {
-    await doc.useServiceAccountAuth({
-      client_email: creds.SERVICE_ACCOUNT_EMAIL,
-      private_key: creds.PRIVATE_KEY
-    });
-  }
-  else {
-    doc.useApiKey(creds.API_KEY);
-  }
-  
+export default async (doc: GoogleSpreadsheet, sheetIds: {sponsor: string, sponsor_ads: string}) => {
   console.log("Loading sheets info...");
   await doc.loadInfo();
   console.log("Adding fake sponsor data...");

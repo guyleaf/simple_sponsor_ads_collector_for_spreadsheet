@@ -4,6 +4,11 @@
   "PRIVATE_KEY": "",
   "API_KEY": "your key",
   "generateFakeData": false,
-  "sheetId": "",
-  "output": "sponsor-ads.json"
+  "spreadsheetId": "",
+  "sheetIds": {
+    "sponsor": "gid query in url",
+    "sponsor_ads": "gid query in url",
+    "sponsor_level": "gid query in url"
+  },
+  "outputFolder": "output"
 }

@@ -3,3 +3,4 @@ account.json
 node_modules
 config.json
 tsconfig.json
+output
