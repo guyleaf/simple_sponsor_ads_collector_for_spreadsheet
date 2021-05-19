@@ -9,11 +9,11 @@ This repo is to collect and process sponsor ads to output json files.
   Please choose one of authentication methods.
   ```js
   {
-    "auth_type": "service/api", // service or api
+    "auth_type": "service/api", // choose one
     "SERVICE_ACCOUNT_EMAIL": "", // necessary for service account
     "PRIVATE_KEY": "", // necessary for service account
     "API_KEY": "your key", // necessary for API-key
-    "generateFakeData": false, // whether need to generate fake data
+    "generateFakeData": false,
     "spreadsheetId": "", // your spreadsheet ID
     "sheetIds": { // your worksheets id
       "sponsor": "gid query in url",
