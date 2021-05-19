@@ -1,6 +1,6 @@
 import generateFakeData from "./src/generateFakeData";
 import collectSponsorAds from "./src/collectSponsorAds";
-import * as config from "./config.json";
+import config from "./config.json";
 
 const auth_type = config.auth_type;
 const creds: {
@@ -22,6 +22,6 @@ else {
 }
 
 (async () => {
-  if (config.generateFakeData) { await generateFakeData(creds, config.sheetId); }
-  await collectSponsorAds(creds, config.output, config.sheetId);
+  if (config.generateFakeData) { await generateFakeData(creds, config.spreadsheetId, config.sheetIds); }
+  await collectSponsorAds(creds, config.output, config.spreadsheetId);
 })()

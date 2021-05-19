@@ -1,5 +1,5 @@
 {
-  "auth_type": "service/api/oauth",
+  "auth_type": "service/api",
   "SERVICE_ACCOUNT_EMAIL": "",
   "PRIVATE_KEY": "",
   "API_KEY": "your key",

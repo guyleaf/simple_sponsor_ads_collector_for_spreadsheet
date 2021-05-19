@@ -3,11 +3,12 @@
     "start": "esno index.ts"
   },
   "dependencies": {
-    "@types/google-spreadsheet": "^3.1.1",
-    "@types/node": "^15.0.2",
-    "esno": "^0.5.0"
+    "google-spreadsheet": "^3.1.15"
   },
   "devDependencies": {
+    "@types/google-spreadsheet": "^3.1.1",
+    "@types/node": "^15.0.2",
+    "esno": "^0.5.0",
     "typescript": "^4.2.4"
   },
   "name": "simple_sponsor_ads_collector_for_spreadsheet",
