@@ -55,7 +55,7 @@ There are two json files, sponsor.json and sponsor_ads.json.
   "link": string,
   "image": string,
   "weight": float/number,
-  "canPublish": boolean
+  "canPublish": string (Y/N)
 }
 ```
 

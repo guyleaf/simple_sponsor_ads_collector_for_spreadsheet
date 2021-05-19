@@ -10,7 +10,7 @@ interface adType extends base{
   link: string,
   image: string,
   weight: Number,
-  canPublish: boolean
+  canPublish: string
 }
 
 interface sponsorType extends base {
@@ -22,7 +22,7 @@ interface sponsorType extends base {
   "intro:en": string,
   link: string,
   image: string,
-  canPublish: boolean
+  canPublish: string
 }
 
 function exportJson(data: {[header: string]: string | Number | boolean}[], outputPath: string) {
@@ -49,7 +49,7 @@ async function combineAds(sponsors: GoogleSpreadsheetRow[], sponsor_ads: GoogleS
       link: data.link,
       image: data.image,
       weight: weight,
-      canPublish: canPublish
+      canPublish: canPublish ? "Y" : "N"
     }
   });
 }
@@ -91,7 +91,7 @@ export default async (doc: GoogleSpreadsheet, outputFolder: string, sheetIds: {s
         "intro:en": row["intro:en"],
         link: row.link,
         image: row.image,
-        canPublish: Boolean(row.canPublish)
+        canPublish: row.canPublish
       };
     });
   })().then(data => {

@@ -31,7 +31,7 @@ interface sponsorType extends base {
   "intro:en": string,
   link: string,
   image: string,
-  canPublish: boolean
+  canPublish: string
 }
 
 interface adType extends base {
@@ -39,7 +39,7 @@ interface adType extends base {
   link: string,
   image: string,
   specialWeight?: number,
-  canPublish: boolean
+  canPublish: string
 }
 
 const sponsors: Array<sponsorType> = [
@@ -52,7 +52,7 @@ const sponsors: Array<sponsorType> = [
     "intro:en": "Aliquip aute irure aliqua amet deserunt.",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "1",
@@ -63,7 +63,7 @@ const sponsors: Array<sponsorType> = [
     "intro:en": "Ea id proident ullamco id officia laboris magna pariatur enim nostrud magna sunt nostrud incididunt.",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "2",
@@ -74,7 +74,7 @@ const sponsors: Array<sponsorType> = [
     "intro:en": "Ullamco aliquip consequat amet id eu aliqua velit consectetur.",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "3",
@@ -85,7 +85,7 @@ const sponsors: Array<sponsorType> = [
     "intro:en": "Elit ut aliqua dolor consequat do pariatur eiusmod esse magna esse dolore Lorem tempor.",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "4",
@@ -96,7 +96,7 @@ const sponsors: Array<sponsorType> = [
     "intro:en": "Dolor enim id anim deserunt culpa dolore officia nostrud in ipsum nisi culpa minim irure.",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": true
+    "canPublish": "Y"
   }
 ];
 
@@ -106,104 +106,104 @@ const ads: Array<adType> = [
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 4,
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 2,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 6,
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 3,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "0",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 7,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 4,
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "1",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 5,
-    "canPublish": true
+    "canPublish": "Y"
   },
   {
     "sponsor": "0",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 2,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 10,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "4",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
     "specialWeight": 8,
-    "canPublish": false
+    "canPublish": "N"
   },
   {
     "sponsor": "2",
     "link": "https://www.google.com",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg",
-    "canPublish": true
+    "canPublish": "Y"
   }
 ];
 
